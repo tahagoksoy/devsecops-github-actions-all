@@ -33,6 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       issues: write
+      contents: read
     needs: security
     name: Run DAST scan on the web application
     steps:
