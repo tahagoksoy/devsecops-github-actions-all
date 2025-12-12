@@ -31,6 +31,8 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
   zap_scan:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     needs: security
     name: Run DAST scan on the web application
     steps:
